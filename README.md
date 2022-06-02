@@ -1,8 +1,8 @@
-# React Users - CRUD React Application
+# NeoUsers - CRUD React Application
 
 ### Installation
 - create react app
-    - `npx create-react-app react-users`
+    - `npx create-react-app neo-users`
 - install bootstrap
     - ``
 - install react router V6

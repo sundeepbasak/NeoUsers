@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "name": "Sundeep Basak",
+      "email": "sunny15basak@gmail.com",
+      "phone": "2222222222",
+      "id": 2
+    },
+    {
+      "name": "Rohan Das",
+      "email": "rohan@gmail.com",
+      "phone": "3333333333",
+      "id": 3
+    },
+    {
+      "name": "Bruce Wayne",
+      "email": "wayne@gmail.com",
+      "phone": "55555555555",
+      "id": 5
+    },
+    {
+      "name": "Thor",
+      "email": "thor-thunder@hotmail.com",
+      "phone": "7777770000",
+      "id": 6
+    },
+    {
+      "name": "Flash ",
+      "email": "flash-fast@gmail.com",
+      "phone": "7895432100000",
+      "id": 7
+    }
+  ]
+}

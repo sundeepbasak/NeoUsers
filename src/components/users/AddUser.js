@@ -18,7 +18,7 @@ const AddUser = () => {
   const submitFormHandler = async (event) => {
     event.preventDefault();
     // console.log(user);
-    await fetch("http://localhost:4000/users", {
+    await fetch("https://fake-api-json-server-sundeep.herokuapp.com/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -101,3 +101,10 @@ export default AddUser;
 //const inputChangeHandler = (event) => {
 //  console.log(event.target.value);
 //  setUser({...user, [event.target.name]: event.target.value})
+
+
+//*before
+//link: http://localhost:4000/users
+
+//*after
+//link : https://fake-api-json-server-sundeep.herokuapp.com/users

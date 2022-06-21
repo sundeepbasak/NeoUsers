@@ -25,7 +25,7 @@ const EditUser = () => {
   const submitFormHandler = async (event) => {
     event.preventDefault();
     // console.log(user);
-    await fetch(`http://localhost:4000/users/${id}`, {
+    await fetch(`https://fake-api-json-server-sundeep.herokuapp.com/users/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -37,7 +37,7 @@ const EditUser = () => {
 
   //load existing user data from server based on id
   const loadUser = async () => {
-    const response = await fetch(`http://localhost:4000/users/${id}`);
+    const response = await fetch(`https://fake-api-json-server-sundeep.herokuapp.com/users/${id}`);
     const data = await response.json();
     setUser(data);
   };
@@ -103,3 +103,9 @@ const EditUser = () => {
 };
 
 export default EditUser;
+
+//*before
+//link: http://localhost:4000/users/${id}
+
+//*after
+//link : https://fake-api-json-server-sundeep.herokuapp.com/users/${id}

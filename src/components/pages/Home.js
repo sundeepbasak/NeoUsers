@@ -9,18 +9,24 @@ const Home = () => {
   }, []);
 
   const loadUsers = async () => {
-    const response = await fetch("http://localhost:4000/users");
+    const response = await fetch(
+      "https://fake-api-json-server-sundeep.herokuapp.com/users"
+    );
     const data = await response.json();
     setUserData(data.reverse()); //reverse the order of the data
   };
 
   const deleteUserHandler = async (id) => {
-    await fetch(`http://localhost:4000/users/${id}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    await fetch(
+      `https://fake-api-json-server-sundeep.herokuapp.com/users/${id}
+    `,
+      {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     loadUsers();
   };
 
@@ -66,7 +72,8 @@ const Home = () => {
                     >
                       Edit
                     </Link>
-                    <Link to="#"
+                    <Link
+                      to="#"
                       className="btn btn-outline-danger m-1"
                       onClick={() => deleteUserHandler(user.id)}
                     >
@@ -84,3 +91,15 @@ const Home = () => {
 };
 
 export default Home;
+
+//*before - loadUsers
+//link: http://localhost:4000/users
+
+//*after - loadUsers
+//link : https://fake-api-json-server-sundeep.herokuapp.com/users
+
+//*before - deleteUser
+//link: http://localhost:4000/users/${id}
+
+//*after - deleteUser
+//link : https://fake-api-json-server-sundeep.herokuapp.com/users/${id}

@@ -14,7 +14,7 @@ const ViewUser = () => {
   }, []);
 
   const loadUser = async () => {
-    const response = await fetch(`http://localhost:4000/users/${id}`);
+    const response = await fetch(`https://fake-api-json-server-sundeep.herokuapp.com/users/${id}`);
     const data = await response.json();
     setUser(data);
   };
@@ -22,7 +22,7 @@ const ViewUser = () => {
   return (
     <div className="container py-4">
       <div className="row">
-        <div class="col-lg-6 mx-auto">
+        <div className="col-lg-6 mx-auto">
 
           <div className="mt-2">
             <Link to="/" className="btn btn-dark">
@@ -30,7 +30,7 @@ const ViewUser = () => {
             </Link>
           </div>
 
-          <div class="mt-4 card shadow p-4 rounded-2">
+          <div className="mt-4 card shadow p-4 rounded-2">
             <h1 className="text-center mb-4">
               <u>View User</u>
             </h1>
@@ -50,3 +50,9 @@ const ViewUser = () => {
 };
 
 export default ViewUser;
+
+//*before
+//link: http://localhost:4000/users/${id}
+
+//*after
+//link : https://fake-api-json-server-sundeep.herokuapp.com/users/${id}
